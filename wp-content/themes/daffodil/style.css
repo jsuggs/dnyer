@@ -1,0 +1,597 @@
+/*
+Theme Name: daffodil
+Theme URI: http://pure-essence.net/2008/10/02/wordpress-theme-daffodil/
+Description: Created by <a href="http://pure-essence.net/">pure-essence.net</a>. Daffodil, green, yellow, black, flower theme.
+Version: 1.0.1
+Author: Ying Zhang
+Author URI: http://pure-essence.net/
+Tags: fixed width, three columns, widgets, valid CSS, widget ready, simple, valid XHTML, left sidebar, green, yellow, black, flower, daffodil
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+
+/* Layout */
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 0.8em;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	background: #008100;
+	color: #001f00;
+}
+
+
+/* Default */
+a {
+	color: #001f00;
+}
+
+a:hover {
+	color: #bbf9bb;
+}
+
+a:focus {
+	outline: none;
+}
+
+h1 {
+	font-size: 1.2em;
+}
+
+h2 {
+	font-size: 1.1em;
+}
+
+h3 {
+	font-size: 1em;
+}
+
+blockquote {
+	padding: 0 1.5em;
+	margin: 0;
+	background: url(images/quoteBk.gif) left top no-repeat;
+}
+
+img.alignleft {
+	float: left;
+	margin: 0 .8em .8em 0;
+}
+
+img.alignright {
+	float: right;
+	margin: 0 0 .8em .8em;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+a img {
+	border: 1px solid #5cbe5c;
+}
+
+form {
+	padding: 0;
+	margin: 0;
+}
+
+/* Hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* Layout */
+#container1 {
+	width: 937px;
+	margin: 0 auto;
+}
+
+#container2 {
+	background: url(images/greenBk.gif) 106px top repeat-y;
+}
+
+#container3 {
+	background: url(images/flowerLeftBk.gif) left top no-repeat;
+}
+
+#container4 {
+	background: url(images/flowerRightBk.gif) right 220px no-repeat;
+}
+
+#page {
+	margin: 0 123px 0 164px;
+	min-height: 700px;
+	padding: 0 12px;
+}
+
+* html #page {
+	height: 700px;
+}
+
+#header1 {
+	background: url(images/headerMiddleBk.gif) left top repeat-x;
+}
+
+#header2 {
+	background: url(images/headerLeftBk.gif) left top no-repeat;
+}
+
+#header3 {
+	background: url(images/headerRightBk.gif) right top no-repeat;
+}
+
+#header4 {
+	height: 145px;
+	background: url(images/headerBk.gif) center bottom no-repeat;
+}
+
+#header4 h1 {
+	margin: 0;
+	padding: 40px 0 0 80px;
+	font-family: Georgia, serif;
+	font-size: 1.8em;
+}
+
+#header4 h1 a,
+#header4 h1 a:hover {
+	color: #fcfc44;
+	text-decoration: none;
+}
+
+#header4 div.description {
+	padding: 0 10px 0 80px;
+	font-family: 'Century Gothic', Arial, Verdana, sans-serif;
+	font-size: 1.2em;
+	color: #006100;
+}
+
+h2.pagetitle,
+h2.commentheading {
+	padding: 0;
+	margin: 0;
+	font-family: Georgia, serif;
+	color: #ffd236;
+	text-align: right;
+}
+
+.post h2 {
+	padding: 0;
+	margin: 0;
+	font-family: 'Century Gothic', Arial, Verdana, sans-serif;
+	font-size: 1.3em;
+}
+
+.post h2 a,
+.post h2 a:hover {
+	color: #001f00;
+	text-decoration: none;
+}
+
+#content p {
+	padding: 0;
+	margin: 0.5em 0;
+}
+
+p.postmetadata,
+p.postmetadata a,
+p.tags,
+p.tags a{
+	font-family: Arial, Verdana, sans-serif;
+	color: #005100;
+}
+
+p.postmetadata a:hover,
+p.tags a:hover {
+	color: #fcfc44;
+}
+
+p.postmetadata,
+p.tags {
+	font-size: 0.85em;
+	margin: 0;
+	padding: 3px 0;
+}
+
+#content .entry p {
+	margin: 0.8em 0;
+}
+
+#content p.tags {
+	background: url(images/tagsIcon.gif) left 3px no-repeat;
+	padding-left: 16px;
+}
+
+ul.postmetadata {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 0.85em;
+	background: url(images/commentBk.gif) left 10px repeat-x;
+	height: 30px;
+}
+
+ul.postmetadata li.comments {
+	float: right;
+}
+
+ul.postmetadata li.comments a {
+	color: #bbf9bb;
+	display: block;
+	text-decoration: none;
+	background: #001f00 url(images/commentRightBk.gif) right top no-repeat;
+}
+
+ul.postmetadata li.comments a:hover {
+	color: #fff;
+}
+
+ul.postmetadata li.comments a span {
+	display: block;
+	background: url(images/commentLeftBk.gif) left top no-repeat;
+	padding: 2px 5px 3px 5px;
+}
+
+#rightcol {
+	width: 122px;
+	float: right;
+	padding: 2em 0 0 0;
+}
+
+#searchform {
+	padding: 0 0 0 1em;
+	background: url(images/searchIcon.gif) 17px 4px no-repeat;
+}
+
+
+#searchform div {
+	background: url(images/searchBk.gif) left top no-repeat;
+	padding: 0 0 3px 0;
+}
+
+#s {
+	width: 8em;
+	font-size: 0.8em;
+	margin: 0 0 0 18px;
+	background: transparent;
+	color: #bbf9bb;
+	border: 0;
+}
+
+ul#navlist {
+	padding: 0;
+	margin: 1.5em 0 0 0;
+	list-style: none;
+	font-size: 0.9em;
+	font-family: Arial, sans-serif;
+	text-transform: lowercase;
+}
+
+ul#navlist li a {
+	display: block;
+	padding: 3px 0 3px 2.2em;
+	background: url(images/navBk.gif) 1em bottom no-repeat;
+	color: #bbf9bb;
+	font-weight: bold;
+	height: 1%;
+	text-decoration: none;
+}
+
+ul#navlist li a:hover,
+ul#navlist li.current_page_item a,
+ul#navlist li.current_page_ancestor a {
+	background: #000 url(images/navBk.gif) 1em top no-repeat;
+	color: #fff;
+}
+
+#sidebar {
+	width: 163px;
+	float: left;
+	margin: 498px 0 0 0;
+	text-align: right;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 0.9em;
+	color: #5cbe5c;
+}
+
+#sidebar a {
+	color: #bbf9bb;
+	text-decoration: none;
+}
+
+#sidebar a:hover {
+	color: #bbf9bb;
+	text-decoration: underline;
+}
+
+#sidebar ul,
+#sidebar ul ul,
+#sidebar h2 {
+	margin: 0;
+	padding: 0;
+}
+
+#sidebar ul {
+	list-style: none;
+	margin: 0 1em 1em 0;
+}
+
+#sidebar h2 {
+	font-family: Georgia, serif;
+	font-weight: normal;
+	text-transform: lowercase;
+	color: #ffd236;
+	padding: 1em 0 0.5em 0;
+	font-size: 1.5em;
+	background: url(images/commentBk.gif) right 2.3em repeat-x;
+}
+
+#sidebar ul ul li a {
+	display: block;
+	padding: 2px 1em 4px 0;
+	background: url(images/sidebarBk.gif) right center no-repeat;
+	height: 1%;
+	border-bottom: 1px solid #008100;
+}
+
+#sidebar ul ul li a:hover {
+	background-color: #006300;
+	color: #fff;
+	text-decoration: none;
+}
+
+#sidebar ul ul#recentcomments li a {
+	display: inline;
+	padding: 0;
+	background-image: none;
+	border: 0;
+}
+
+#sidebar ul ul#recentcomments li a:hover {
+	background-color: transparent;
+}
+#sidebar ul ul#recentcomments li {
+	padding: 2px 1em 4px 0;
+	background: url(images/sidebarBk.gif) right center no-repeat;
+	border-bottom: 1px solid #008100;
+}
+#sidebar ul ul#recentcomments li:hover {
+	background-color: #006300;
+}
+
+table#wp-calendar {
+	width: 150px;
+}
+
+#wp-calendar th,
+#wp-calendar td {
+	text-align: center;
+	width: 14%;
+	padding: 2px 0;
+}
+
+#wp-calendar td#today {
+	font-weight: bold;
+}
+
+.navigation {
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 0.9em;
+	padding: 0 0 1em 0;
+}
+
+.navigation .alignleft a {
+	background: url(images/navLeftArrow.gif) left bottom no-repeat;
+	padding-left: 1em;
+}
+
+.navigation .alignleft a:hover {
+	background: url(images/navLeftArrow.gif) left top no-repeat;
+}
+
+.navigation .alignright a {
+	background: url(images/navRightArrow.gif) right bottom no-repeat;
+	padding-right: 1em;
+}
+
+.navigation .alignright a:hover {
+	background: url(images/navRightArrow.gif) right top no-repeat;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #005100;
+}
+
+.navigation a:hover {
+	text-decoration: none;
+	color: #fcfc44;
+}
+
+
+/* Comment */
+h2.commentheading {
+	padding: 0 0 1em 0;
+}
+
+ol.commentlist {
+	padding: 0;
+	margin: 0 0 1em 0;
+	list-style: none;
+}
+
+div.commentindheader {
+	padding: 1em 1em 0 1em;
+	font-family: Arial, Verdana, sans-serif;
+}
+
+div.commentindtext {
+	padding: 0 1em 1em 1em;
+}
+
+ol.commentlist li.alt div.commentindheader {
+	background: url(images/commentIndTopBk.gif) center top no-repeat;
+}
+
+ol.commentlist li.alt {
+	background: #006f00 url(images/commentIndBottomBk.gif) center bottom no-repeat;
+}
+
+div.avatarwrapper {
+	position: relative;
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+span.avataroverlay {
+	position: absolute;
+	display: block;
+	background: url(images/commentAvatarOverlay.gif) left top no-repeat;
+	width: 32px;
+	height: 32px;
+	top: 0;
+	left: 0;
+}
+
+li.alt span.avataroverlay {
+	background: url(images/commentAvatarOverlayAlt.gif) left top no-repeat;
+}
+
+li.alt blockquote {
+	background-image: url(images/quoteCommentAltBk.gif);
+}
+
+div.commentindheader cite {
+	font-style: normal;
+}
+
+#recaptcha_area {
+	padding-bottom: 1em;
+}
+
+form#commentform {
+	margin: 0 0 1em 0;
+	padding: 1em;
+}
+
+form#commentform p {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+input#author,
+input#email,
+input#url {
+	width: 27em;
+}
+
+input#author,
+input#email,
+input#url,
+textarea#comment {
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 1em;
+	padding: 2px;
+	background: #008100;
+	color: #fff;
+	border: 1px solid #006f00;
+}
+
+textarea#comment {
+	width: 45em;
+	height: 120px;
+}
+
+input#submit {
+	background: #006300 url(images/buttonBk.gif) left top no-repeat;
+	border: 0;
+	color: #fff;
+	font-family: Arial, Verdana, sans-serif;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	width: 79px;
+	height: 27px;
+}
+
+
+#footer {
+	clear: both;
+	background: #001f00;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 0.9em;
+	color: #bbf9bb;
+}
+
+#footer a {
+	color: #ffe000;
+	text-decoration: none;
+}
+
+#footer a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+#footerinner {
+	width: 937px;
+	margin: 0 auto;
+	padding: 1em 0 2em 0;
+}
+
+p.poweredBy {
+	margin: 0 0 0 170px;
+}
+
+p.validations {
+	margin: 10px 0 0 170px;
+}
+
+span.buttons {
+	padding: 0 0 0 264px;
+}
+
+span.buttons img {
+	border: 0;
+	vertical-align: bottom;
+	padding: 0 5px;
+}
+
+span.buttons img.home {
+	width: 11px;
+	height: 10px;
+}
+
+span.buttons img.top {
+	width: 9px;
+	height: 10px;
+}
+
+#footer a.xhtml,
+#footer a.css {
+	font-weight: bold;
+	padding: 0 18px 0 0;
+	color: #fff;
+	background: url(images/greenArrow.gif) right 1px no-repeat;
+}
+
+#footer a.css {
+	padding-left: 3px;
+}

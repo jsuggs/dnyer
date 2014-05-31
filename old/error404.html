@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="dnyer, site, development, design, website, web-site, web, dev, web pages, web page, site design, website design, programming, business, online, hosting." />
+<meta name="description" content="Dnyer Site Development specializes in Website Design and Construction. Give your business a face on the World Wide Web with a site developed by Dnyer Site Dev." />
+<title>DNYER Site Development - Give your business a face on the Web!</title>
+<link rel="stylesheet" type="text/css" href="css/jquery.jcarousel.css" />
+<link rel="stylesheet" type="text/css" href="css/dnyer-styles.css" />
+<script type="text/javascript" src="js/jquery-1.2.3.pack.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript">jQuery(document).ready(function() {jQuery('#mycarousel').jcarousel({scroll: 5});});</script>
+<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		<div id="logo">
+			<a href="http://www.dnyer.com/"><img src="images/logo.jpg" alt="Dnyer Site Development" title="Dnyer Site Development" /></a>	
+		</div>
+		<div id="header-links">
+			<ul><li><a href="http://www.dnyer.com/">Home<div class="topleft"></div><div class="topright"></div></a></li><li><a href="about.html">About Us<div class="topleft"></div><div class="topright"></div></a></li><li><a href="contact.html">Contact Us<div class="topleft"></div><div class="topright"></div></a></li><li class="last"><a href="portfolio.html">Portfolio<div class="topleft"></div><div class="topright"></div></a></li></ul>
+		</div>
+		<div id="phone"><b>Phone:</b> 570.242.1190<span>::</span><b>Email:</b> <a href="mailto:info@dnyer.com">info@dnyer.com</a></div>
+		<div id="header-tabs"><ul><li><a href="#" class="chosen" onclick="toggleContent(0); return false;">Packages</a></li><li><a href="#" onclick="toggleContent(1); return false;">Features</a></li></ul></div>
+		<div id="login"><a href="login.php">Account Login</a></div>
+		<div id="quick-contact"><a href="#" onclick="toggleQuickContact(); return false;">Quick Contact</a><div id="quick-contact-frame" class="hidden"></div><iframe id="qc-iframe" src="quickcontact.html" frameborder="0" border="0" class="hidden" allowtransparency="true"></iframe>
+		</div>
+	</div>
+	
+	<div id="bodyshell" style="padding:15px;">
+		<h1 id="title">404 Error - Sorry, this page does not exist!</h1>
+		Please return to our homepage by <a href="http://www.dnyer.com/">Clicking Here</a>!
+	</div>
+	
+	<div id="footer">
+		<ul><li><a href="http://www.dnyer.com/">Home</a><span>:</span></li><li><a href="about.html">About Us</a><span>:</span></li><li><a href="contact.html">Contact Us</a><span>:</span></li><li><a href="portfolio.html">Portfolio</a><span>:</span></li><li><a href="packages.html">Packages</a><span>:</span></li><li><a href="features.html">Features</a><span>:</span></li><li><a class="last" href="login.php">Account Login</a></li></ul>
+		<div id="sneak-peek"><a href="#" onclick="toggleSneakPeak(); return false;">Sneak Peek</a></div>
+		<div id="sneak-peek-container"></div>
+		<div id="copyright">&copy; 2008 Dnyer Site Development, LLC</div>
+	</div>
+</div>
+<div id="dnyerTransBG" onclick="closePopIn(); return false;" style="height: 0px;"></div>
+<div id="dnyerPopIn" style="display: none; z-index: 300; left: 0px;"></div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+authtype basic
+authgroupfile /dev/null
+authuserfile /home/content/d/n/y/dnyer11/htconfig/.htpassword.ghtpassword
+authname "Secure Area"
+require user shopvanitykills
