@@ -1,5 +1,5 @@
 <?php
-$db = mysql_connect('shopvanitykills.db.12421967.hostedresource.com','shopvanitykills','R@ch@el11');
+$db = mysql_connect('localhost','shopvanitykills','R@ch@el11');
 mysql_select_db('shopvanitykills',$db);
 
 ?>
