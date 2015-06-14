@@ -10,11 +10,14 @@
 <style type="text/css">
 body {margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:13px; background:#75a0c5;}
 .container {width: 100%;}
-ul {padding:10px; margin:0; list-style:disc; margin:10px; border:1px solid #2d2d2d; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; box-shadow:0 2px 5px #444; -webkit-box-shadow:0 2px 5px #444; -moz-box-shadow:0 2px 5px #444; background:#fff;}
-ul li {padding:3px 0; margin-left:15px; display:none;}
+ul {padding:10px; list-style:disc; margin:10px 35px 10px 10px; border:1px solid #2d2d2d; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; box-shadow:0 2px 5px #444; -webkit-box-shadow:0 2px 5px #444; -moz-box-shadow:0 2px 5px #444; background:#fff;}
+ul li {padding:3px 0; margin-left:15px;}
 ul li:first-child {font-weight:bold; text-decoration:none; list-style:none; margin-left:0; font-size:15px; display:block; cursor:pointer;}
 ul li:first-child:hover {color:#e59400;}
 .title {font-size:24px; padding:10px; text-shadow:0 2px 5px #000; color:#fff;}
+
+.fixed-anchors {width:25px; position:fixed; right:0; top:0; height:100%; overflow-y:scroll; padding: 5px 5px 0;}
+.fixed-anchors a {display:block; text-align: center; height:25px; line-height:25px; width: 25px; font-weight: bold; font-size: 11px; margin-bottom:5px; background:#fff; color:#999; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; text-decoration:none;}
 
 @media screen and (min-width: 320px and max-width: 480px ) {
 	.container {width: 320px;}
@@ -28,7 +31,7 @@ ul li:first-child:hover {color:#e59400;}
 
 <div class="title">MOVIE LIST (<span></span>)</div>
 
-<ul>
+<ul id="num">
 <li>#</li>
 <li>10 Things I Hate About You <b><i>(Blu-ray)</i></b></li>
 <li>101 Dalmations <b><i>(Blu-ray)</i></b></li>
@@ -40,7 +43,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>300</li>
 </ul>
 
-<ul>
+<ul id="A">
 <li>A</li>
 <li>A-Team, The <b><i>(Blu-ray)</i></b></li>
 <li>Abduction <b><i>(Blu-ray)</i></b></li>
@@ -67,9 +70,12 @@ ul li:first-child:hover {color:#e59400;}
 <li>Avengers, The <b><i>(Blu-ray/3D)</i></b></li>
 </ul>
 
-<ul>
+<ul id="B">
 <li>B</li>
 <li>Baby Mama</li>
+<li>Back To The Future <b><i>(Blu-ray)</i></b></li>
+<li>Back To The Future 2 <b><i>(Blu-ray)</i></b></li>
+<li>Back To The Future 3 <b><i>(Blu-ray)</i></b></li>
 <li>Backup Plan, The (x2)</li>
 <li>Bad Boys</li>
 <li>Batman Begins <b><i>(Blu-ray)</i></b></li>
@@ -109,7 +115,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Burlesque <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="C">
 <li>C</li>
 <li>Captain America: The First Avenger <b><i>(Blu-ray)</i></b></li>
 <li>Captain America: The Winter Soldier <b><i>(Blu-ray/3D)</i></b></li>
@@ -142,7 +148,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Croods, The <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="D">
 <li>D</li>
 <li>Dark Knight, The <b><i>(Blu-ray)</i></b></li>
 <li>Dark Knight Rises, The <b><i>(Blu-ray)</i></b></li>
@@ -164,7 +170,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Dumbo <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="E">
 <li>E</li>
 <li>Easy A <b><i>(Blu-ray)</i></b></li>
 <li>Eight Below <b><i>(Blu-ray)</i></b></li>
@@ -182,7 +188,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Expendables 2, The <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="F">
 <li>F</li>
 <li>Facing the Giants</li>
 <li>Failure to Launch</li>
@@ -212,7 +218,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Fun with Dick and Jane</li>
 </ul>
 
-<ul>
+<ul id="G">
 <li>G</li>
 <li>Game of Thrones: Season 1 <b><i>(Blu-ray)</i></b></li>
 <li>Game Plan, The <b><i>(Blu-ray)</i></b></li>
@@ -249,7 +255,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Guardians of the Galaxy <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="H">
 <li>H</li>
 <li>Hairspray</li>
 <li>Hancock <b><i>(Blu-ray)</i></b></li>
@@ -286,7 +292,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Hunger Games, The: Mockingjay - Part 1 <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="I">
 <li>I</li>
 <li>I Am Legend <b><i>(Blu-ray)</i></b></li>
 <li>Ice Age <b><i>(Blu-ray)</i></b></li>
@@ -317,7 +323,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Italian Job, The <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="J">
 <li>J</li>
 <li>Jack Reacher <b><i>(Blu-ray)</i></b></li>
 <li>Jack Ryan: Shadow Recruit <b><i>(Blu-ray)</i></b></li>
@@ -341,7 +347,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Just Married</li>
 </ul>
 
-<ul>
+<ul id="K">
 <li>K</li>
 <li>Karate Kid, The (2010) <i>(Burned)</i></li>
 <li>Kingdom, The</li>
@@ -351,7 +357,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Kung Fu Panda</li>
 </ul>
 
-<ul>
+<ul id="L">
 <li>L</li>
 <li>Lady & The Tramp <b><i>(Blu-ray)</i></b></li>
 <li>Lake House, The</li>
@@ -383,8 +389,9 @@ ul li:first-child:hover {color:#e59400;}
 <li>Lucky One, The <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="M">
 <li>M</li>
+<li>Magic Mike <b><i>(Blu-ray)</i></b></li>
 <li>Maleficent <b><i>(Blu-ray)</i></b></li>
 <li>Man of Steel <b><i>(Blu-ray)</i></b></li>
 <li>Man on Fire</li>
@@ -422,7 +429,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>My Best Friend's Girl</li>
 </ul>
 
-<ul>
+<ul id="N">
 <li>N</li>
 <li>Nanny Diaries</li>
 <li>Nanny McPhee <b><i>(Blu-ray)</i></b></li>
@@ -435,10 +442,11 @@ ul li:first-child:hover {color:#e59400;}
 <li>Night at the Museum: Battle of the Smithsonian <b><i>(Blu-ray)</i></b></li></li>
 <li>Night at the Museum: Secret of the Tomb <b><i>(Blu-ray)</i></b></li>
 <li>Ninja Assassin</li>
+<li>Non-Stop <b><i>(Blu-ray)</i></b></li>
 <li>Now You See Me <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="O">
 <li>O</li>
 <li>Oblivion <b><i>(Blu-ray)</i></b></li>
 <li>Ocean's Eleven</li>
@@ -462,7 +470,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Over the Hedge</li>
 </ul>
 
-<ul>
+<ul id="P">
 <li>P</li>
 <li>Pacific Rim <b><i>(Blu-ray)</i></b></li>
 <li>Pacifier, The</li>
@@ -493,12 +501,12 @@ ul li:first-child:hover {color:#e59400;}
 <li>Puss in Boots <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="Q">
 <li>Q</li>
 <li>Quantum of Solace <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="R">
 <li>R</li>
 <li>Race to Witch Mountain <b><i>(Blu-ray)</i></b></li>
 <li>Rambo (2008) <b><i>(Blu-ray)</i></b></li>
@@ -529,7 +537,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Rookie of the Year</li>
 </ul>
 
-<ul>
+<ul id="S">
 <li>S</li>
 <li>Safe Haven <b><i>(Blu-ray)</i></b></li>
 <li>Salt <b><i>(Blu-ray)</i></b></li>
@@ -588,11 +596,12 @@ ul li:first-child:hover {color:#e59400;}
 <li>Sword in the Stone, The <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="T">
 <li>T</li>
 <li>Take the Lead</li>
 <li>Taken</li>
 <li>Taken 2 <b><i>(Blu-ray)</i></b></li>
+<li>Taken 3 <b><i>(Blu-ray)</i></b></li>
 <li>Taking Lives</li>
 <li>Taking of Pelham 123, The</li>
 <li>Tangled <b><i>(Blu-ray)</i></b></li>
@@ -632,7 +641,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Two Weeks Notice</li>
 </ul>
 
-<ul>
+<ul id="U">
 <li>U</li>
 <li>Unbreakable</li>
 <li>Underworld <b><i>(Blu-ray)</i></b></li>
@@ -642,7 +651,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Uptown Girls</li>
 </ul>
 
-<ul>
+<ul id="V">
 <li>V</li>
 <li>Valentine's Day</li>
 <li>Vantage Point</li>
@@ -651,7 +660,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Vow, The <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="W">
 <li>W</li>
 <li>Waist Deep</li>
 <li>Waiting</li>
@@ -674,7 +683,7 @@ ul li:first-child:hover {color:#e59400;}
 <li>Wreck-It Ralph <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="X">
 <li>X</li>
 <li>X-Men: Days of Future Past <b><i>(Blu-ray)</i></b></li>
 <li>X-Men: First Class <b><i>(Blu-ray)</i></b></li>
@@ -684,27 +693,54 @@ ul li:first-child:hover {color:#e59400;}
 <li>X3: The Last Stand <b><i>(Blu-ray)</i></b></li>
 </ul>
 
-<ul>
+<ul id="Y">
 <li>Y</li>
 <li>You Again <b><i>(Blu-ray)</i></b></li>
 <li>You, Me, and Dupree</li>
 </ul>
 
-<ul>
+<ul id="Z">
 <li>Z</li>
 <li>Zombieland</li>
 <li>Zookeeper <b><i>(Blu-ray)</i></b></li>
 </ul>
+
+
+<div class="fixed-anchors">
+<a href="#num">#</a>
+<a href="#A">A</a>
+<a href="#B">B</a>
+<a href="#C">C</a>
+<a href="#D">D</a>
+<a href="#E">E</a>
+<a href="#F">F</a>
+<a href="#G">G</a>
+<a href="#H">H</a>
+<a href="#I">I</a>
+<a href="#J">J</a>
+<a href="#K">K</a>
+<a href="#L">L</a>
+<a href="#M">M</a>
+<a href="#N">N</a>
+<a href="#O">O</a>
+<a href="#P">P</a>
+<a href="#Q">Q</a>
+<a href="#R">R</a>
+<a href="#S">S</a>
+<a href="#T">T</a>
+<a href="#U">U</a>
+<a href="#V">V</a>
+<a href="#W">W</a>
+<a href="#X">X</a>
+<a href="#Y">Y</a>
+<a href="#Z">Z</a>
+</div>
 
 </div>
 
 <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
 	$(function() {
-		$('.container > ul > li:first-child').on('click', function(e) {
-			e.preventDefault();
-			$(this).siblings('li').slideToggle(500);
-		});
 		$('.container > ul').each(function() {
 			$('> li:first-child', this).append(' (' + $('> li:first-child', this).siblings('li').length + ')');
 		});
