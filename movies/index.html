@@ -859,8 +859,6 @@ hr {margin: 10px 0;}
                     : 'http://www.omdbapi.com/?i=' + imdb + '&plot=short&r=json'
             ;
 
-            console.log(url);
-
             if (imdb) {
                 $.ajax({
                     url: url,
@@ -873,12 +871,13 @@ hr {margin: 10px 0;}
         });
 
         function buildMovieModal(data) {
-            var body = $('body'),
+            var apiKey = 'bb0eb3bf1c00ba0bae16d72e35db4892',
+                body = $('body'),
                 modal = $('<div class="movie-modal"></div>'),
                 modalBackdrop = $('<div class="movie-modal-backdrop"></div>')
                 closeButton = $('<a href="#" class="close"></a>'),
                 movieName = $('<div class="movie-name">' + data.Title + ' <i>(' + data.Year + ')</i></div>'),
-                moviePoster = $('<div class="movie-poster"><img src="' + data.Poster + '" /></div>'),
+                moviePoster = $('<div class="movie-poster"><img src="" /></div>'),
                 movieInfo = $('<div class="movie-info"></div>'),
                 movieRating = $('<div class="movie-row"><label>IMDB Rating:</label><div class="detail">' + data.imdbRating + '</div></div>'),
                 movieRated = $('<div class="movie-row"><label>Rated:</label><div class="detail">' + data.Rated + '</div></div>'),
@@ -897,9 +896,19 @@ hr {margin: 10px 0;}
                 $('.movie-modal, .movie-modal-backdrop').remove();
             }
 
-            body.append(modalBackdrop, modal);
-
-            initModalEvents();
+            $.ajax({
+                url: 'https://api.themoviedb.org/3/find/' + data.imdbID + '?external_source=imdb_id&api_key=' + apiKey,
+                type: 'get',
+                dataType: 'json'
+            }).done(function(data) {
+                var imagePath = data.movie_results.length
+                    ? data.movie_results[0].poster_path
+                    : data.tv_results[0].poster_path
+                ;
+                modal.find('.movie-poster img').attr('src', 'http://image.tmdb.org/t/p/w500' + imagePath);
+                body.append(modalBackdrop, modal);
+                initModalEvents();
+            });
         }
 
         function initModalEvents() {
