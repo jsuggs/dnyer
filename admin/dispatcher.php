@@ -16,10 +16,10 @@ switch ($_POST['dsd_direct']) {
 		$message .= $name . "\n";
 		$message .= $email . "\n";
 		$message .= $comments . "\n\n";
-		$headers = "From: info@dnyer.com" . "\r\n";
+		$headers = "From: dnyer11@gmail.com" . "\r\n";
 		
 		
-		mail("info@dnyer.com", $subject, $message, $headers);
+		mail("dnyer11@gmail.com", $subject, $message, $headers);
 		
 		if ($_POST['is_quick_contact'])
 			header('Location: '.$_POST['is_quick_contact']);
